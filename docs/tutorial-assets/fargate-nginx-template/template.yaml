@@ -66,8 +66,8 @@ spec:
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
           http_port: 8080
           # The AWS Proton environments to use for deploying the initial service instances
-          aws_proton_dev_environment_name: "multi-svc-beta"
-          aws_proton_prod_environment_name: "multi-svc-beta"
+          aws_proton_dev_environment_name: "fargate-env"
+          aws_proton_prod_environment_name: "fargate-env"
           # The AWS account where the Proton service will be created
           aws_account_id: "508282329626"
           # The AWS region where the Proton service will be created
@@ -94,7 +94,7 @@ spec:
         serviceSpecPath: ./spec.yaml
         # Update the following fields to match the resources in your AWS account
         region: eu-west-1
-        templateName: lb-fargate-service
+        templateName: load-balanced-fargate-svc
         templateMajorVersion: '1'
         repositoryConnectionArn: 'arn:aws:codestar-connections:eu-west-1:508282329626:connection/d0c5df5c-c171-409c-966c-d3388ad2ad82'
 
