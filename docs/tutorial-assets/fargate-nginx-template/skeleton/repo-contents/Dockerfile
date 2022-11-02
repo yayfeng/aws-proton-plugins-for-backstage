@@ -1,3 +1,3 @@
 FROM public.ecr.aws/nginx/nginx:1.21
-EXPOSE 80
+EXPOSE 8080
 COPY index.html /usr/share/nginx/html
